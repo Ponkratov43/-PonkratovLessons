@@ -16,6 +16,7 @@ public class Main {
 
         } else
             System.out.println("Error. Radius less than zero. Please, try again.");
+        System.out.println("////////////////////");
 
 //Task 3
         System.out.println("How many degrees outside ?");
@@ -32,7 +33,31 @@ public class Main {
         } else if (deg > 30) {
             System.out.println("Don’t wear anything\n");
         }
-//Task 5
+        System.out.println("////////////////////");
+//Task 4
+        int salary1 = 400;
+        int salary2 = 200;
+        int salary3 = 300;
+        int max = 0, min = 0, raz = 0;
+        if (salary1 > salary2 && salary1 > salary3)
+            max = salary1;
+        if (salary1 < salary2 && salary1 < salary3)
+            min = salary1;
+
+        if (salary2 > salary1 && salary2 > salary3)
+            max = salary2;
+        if (salary2 < salary1 && salary2 < salary3)
+            min = salary2;
+
+        if (salary3 > salary1 && salary3 > salary1)
+            max = salary3;
+        if (salary3 < salary1 && salary3 < salary1)
+            min = salary3;
+
+        raz = max - min;
+        System.out.println(raz + "\n");
+        System.out.println("////////////////////");
+//Task5
         int a = 2;
         int n = 3;
 
@@ -43,6 +68,7 @@ public class Main {
             System.out.println(a);
         }
         System.out.println();
+        System.out.println("////////////////////");
 
 //Task 6
         float startSum = 100f;
@@ -50,12 +76,13 @@ public class Main {
         float procnalog = 1f;
         int years = 5;
         float nalog = (startSum * procnalog) / 100 * years;
-        System.out.println(nalog/10 + " - Это налог, который банк забирает ежегодно");
+        System.out.println(nalog / 10 + " - Это налог, который банк забирает ежегодно");
         System.out.println(nalog + " - Это налог, который банк заберёт за " + years + " лет");
         for (int i = 1; i <= years; i++) {
             startSum = startSum / 100 * proc + startSum;
             System.out.println(startSum + " бел р");
         }
         System.out.println();
+        System.out.println("////////////////////");
     }
 }
