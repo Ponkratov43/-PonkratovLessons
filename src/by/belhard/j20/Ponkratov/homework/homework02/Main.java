@@ -35,9 +35,15 @@ public class Main {
         }
         System.out.println("////////////////////");
 //Task 4
-        int salary1 = 400;
-        int salary2 = 200;
-        int salary3 = 300;
+        System.out.println("Введите зарплаты трёх человек: ");
+        Scanner s1 = new Scanner(System.in);
+        Scanner s2 = new Scanner(System.in);
+        Scanner s3 = new Scanner(System.in);
+
+        int salary1 = s1.nextInt();
+        int salary2 = s2.nextInt();
+        int salary3 = s3.nextInt();
+
         int max = 0, min = 0, raz = 0;
         if (salary1 > salary2 && salary1 > salary3)
             max = salary1;
@@ -49,13 +55,14 @@ public class Main {
         if (salary2 < salary1 && salary2 < salary3)
             min = salary2;
 
-        if (salary3 > salary1 && salary3 > salary1)
+        if (salary3 > salary1 && salary3 > salary2)
             max = salary3;
-        if (salary3 < salary1 && salary3 < salary1)
+        if (salary3 < salary1 && salary3 < salary2)
             min = salary3;
 
         raz = max - min;
-        System.out.println(raz + "\n");
+        System.out.println("Минимальная: " + min + "\n" + "Максимальная: " + max + "\n" + "Средняя зарплата: " + raz);
+
         System.out.println("////////////////////");
 //Task5
         int a = 2;
