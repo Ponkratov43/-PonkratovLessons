@@ -8,7 +8,7 @@ public class Main {
 //Task 2
         Scanner sc = new Scanner(System.in);
         System.out.print("Please, enter the radius: ");
-        int r = sc.nextInt();
+        float r = sc.nextInt();
         if (r > 0) {
             float area = 3.1415f + (r * r);
             float c = (3.1415f * 2) * r;
@@ -24,11 +24,11 @@ public class Main {
         int deg = sc1.nextInt();
         if (deg < 10) {
             System.out.println("Put on a jacket\n");
-        } else if (deg <= 10 || deg <= 15) {
+        } else if (deg <= 15) {
             System.out.println("Put on a windbreaker\n");
-        } else if (deg == 16 || deg < 20) {
+        } else if (deg < 20) {
             System.out.println("Put on a sweater\n");
-        } else if (deg == 21 || deg < 30) {
+        } else if (deg < 30) {
             System.out.println("Put on your shirt\n");
         } else if (deg > 30) {
             System.out.println("Don’t wear anything\n");
@@ -37,12 +37,10 @@ public class Main {
 //Task 4
         System.out.println("Введите зарплаты трёх человек: ");
         Scanner s1 = new Scanner(System.in);
-        Scanner s2 = new Scanner(System.in);
-        Scanner s3 = new Scanner(System.in);
 
         int salary1 = s1.nextInt();
-        int salary2 = s2.nextInt();
-        int salary3 = s3.nextInt();
+        int salary2 = s1.nextInt();
+        int salary3 = s1.nextInt();
 
         int max = 0, min = 0, raz = 0;
         if (salary1 > salary2 && salary1 > salary3)
@@ -66,16 +64,13 @@ public class Main {
         System.out.println("////////////////////");
 //Task5
         int a = 2;
-        int n = 3;
-
-        if (n < 0)
-            System.out.println("Error.\n");
-        for (int i = 1; i <= n; i++) {
-            a *= n - 1;
-            System.out.println(a);
+        int n = 5;
+        int res = 1;
+        for(int i = 1; i<=n; i++) {
+            res = res * a;
+            System.out.print(res + "  ");
         }
-        System.out.println();
-        System.out.println("////////////////////");
+        System.out.println("\n///////////////////");
 
 //Task 6
         float startSum = 100f;
@@ -83,11 +78,9 @@ public class Main {
         float procnalog = 1f;
         int years = 5;
         float nalog = (startSum * procnalog) / 100 * years;
-        System.out.println(nalog / 10 + " - Это налог, который банк забирает ежегодно");
-        System.out.println(nalog + " - Это налог, который банк заберёт за " + years + " лет");
         for (int i = 1; i <= years; i++) {
-            startSum = startSum / 100 * proc + startSum;
-            System.out.println(startSum + " бел р");
+            startSum = (startSum / 100 * proc + startSum) - (nalog / 10);
+            System.out.println("На счету будет: " + startSum + " бел р");
         }
         System.out.println();
         System.out.println("////////////////////");
