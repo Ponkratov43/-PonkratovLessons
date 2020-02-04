@@ -1,4 +1,4 @@
-package by.belhard.j20.Ponkratov.Lessons.lesson01;
+package by.belhard.j20.ponkratov.lessons.lesson01;
 
 public class FirstMain {
 

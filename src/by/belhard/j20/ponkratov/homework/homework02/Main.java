@@ -1,4 +1,4 @@
-package by.belhard.j20.Ponkratov.homework.homework02;
+package by.belhard.j20.ponkratov.homework.homework02;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -43,24 +43,27 @@ public class Main {
         BigInteger salary2 = s1.nextBigInteger();
         BigInteger salary3 = s1.nextBigInteger();
 
-        BigInteger maxNum, minNum, maxRes, minRes, result;
+        BigInteger maxNum, minNum;
 
-        maxNum = salary1.max(salary2);
-        minNum = salary1.min(salary2);
+        maxNum = salary1.max(salary2.max(salary3));
+        minNum = salary1.min(salary2.max(salary3));
 
-        maxRes = salary3.max(maxNum);
-        minRes = salary3.min(minNum);
 
-        result = maxRes.subtract(minRes);
-
-        System.out.println("Минимальная: " + minRes + "\n" + "Максимальная: " + maxRes + "\n" + "Средняя зарплата: " + result);
+        System.out.println("Минимальная: " + minNum + "\n" + "Максимальная: "
+                + maxNum + "\n" + "Средняя зарплата: " + (maxNum.subtract(minNum)));
 
         System.out.println("////////////////////");
+
+        int sal1 = 100, sal2 = 200, sal3 = 300;
+        int max = Math.max(Math.max(sal1, sal2), sal3);
+        int min = Math.min(Math.min(sal1, sal2), sal3);
+        System.out.println("Difference: " + (max - min));
+
 //Task5
         int a = 2;
         int n = 5;
         int res = 1;
-        for(int i = 1; i<=n; i++) {
+        for (int i = 1; i <= n; i++) {
             res = res * a;
             System.out.print(res + "  ");
         }

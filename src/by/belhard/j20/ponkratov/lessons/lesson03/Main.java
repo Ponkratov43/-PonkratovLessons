@@ -1,4 +1,4 @@
-package by.belhard.j20.Ponkratov.Lessons.lesson03;
+package by.belhard.j20.ponkratov.lessons.lesson03;
 
 public class Main {
     public static void main(String[] args) {
@@ -64,12 +64,27 @@ public class Main {
                 result += s;
         }
         System.out.println(result);
+        System.out.println();
 
         String name = "asd";
         System.out.printf("I am %d years old. %s", 30, name);
 
         System.out.println();
 
+        int n = 9;
+        int gap = n - 1;
+        String result1;
 
+        for (int i = 1; i <= n; i++) {
+            result1 = " ";
+            for (int g = 0; g < gap; g++) {
+                result1 += " ";
+            }
+            for (int j = 0; j < i; j++) {
+                result1 += i + "";
+            }
+            System.out.println(result1);
+            gap--;
+        }
     }
 }
