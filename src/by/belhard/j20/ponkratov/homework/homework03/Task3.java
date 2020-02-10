@@ -4,7 +4,7 @@ public class Task3 {
 
     public static void main(String[] args) {
 
-        set(3, 5);
+        set(4, 5);
 
     }
 
@@ -18,7 +18,7 @@ public class Task3 {
 
         int valueSet = intStart;
         for (int row = 0; row < n; row++) {
-            for (int col = 0; col <= row; col++) {
+            for (int col = 0; col <= row ; col++) {
                 arr[row][col] = valueSet;
                 valueSet *= 2;
             }
