@@ -1,22 +1,29 @@
 package by.belhard.j20.ponkratov.homework.homework06.task04;
 
-public class Square implements PolygonCalc {
+public class Square extends CalcUtils implements PolygonCalc {
 
-    int side = 3;
-    int perimeter;
-    int area;
+    int side;
+    public double perimetr;
+    public double area;
 
 
-    @Override
-    public int perimetr() {
-        perimeter = (side + side) * 2;
-        return perimeter;
+    public Square(int side) {
+        this.side = side;
     }
 
     @Override
-    public int area() {
+    public double perimetr() {
+        perimetr = (side + side) * 2;
+        return perimetr;
+    }
+
+    @Override
+    public double area() {
         area = side * 2;
         return area;
     }
 
+    public int getSide() {
+        return side;
+    }
 }

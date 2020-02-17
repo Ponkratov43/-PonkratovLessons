@@ -13,7 +13,7 @@ final class Community {
 
     Person find(String name) {
         for(Person p : persons) {
-            if(p.name.equals(name)) {
+            if(p.getName().equals(name)) {
                 return p;
             }
         }

@@ -13,4 +13,8 @@ final class Person {
         return "Person. " +
                 "name: " + name;
     }
+
+    public String getName() {
+        return name;
+    }
 }
